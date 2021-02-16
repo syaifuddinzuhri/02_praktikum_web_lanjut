@@ -41,6 +41,8 @@ use Illuminate\Support\Facades\Route;
 //   return 'Halaman artikel dengan ID ' . $id;
 // });
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Praktikum 2
@@ -51,6 +53,7 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/about', [PageController::class, 'about']);
 // Route::get('/articles/{id}', [PageController::class, 'articles']);
 
+// Modifikasi Routes
 // Route::get('/', [HomeController::class, 'index']);
 // Route::get('/about', [AboutController::class, 'index']);
 // Route::get('/articles/{id}', [ArticleController::class, 'index']);
@@ -61,19 +64,19 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home.index');
+// Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
-Route::group(['prefix' => 'category'], function () {
-  Route::get('/', [CategoryController::class, 'index'])->name('category.index');
-  Route::get('/{category}', [CategoryController::class, 'showProducts'])->name('category.showproducts');
-});
+// Route::group(['prefix' => 'category'], function () {
+//   Route::get('/', [CategoryController::class, 'index'])->name('category.index');
+//   Route::get('/{category}', [CategoryController::class, 'showProducts'])->name('category.showproducts');
+// });
 
-Route::get('/news', [NewsController::class, 'index'])->name('news.index');
-Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
+// Route::get('/news', [NewsController::class, 'index'])->name('news.index');
+// Route::get('/news/{news}', [NewsController::class, 'show'])->name('news.show');
 
-Route::group(['prefix' => 'program'], function () {
-  Route::get('/{program}', [ProgramController::class, 'listProgram'])->name('program.list');
-});
+// Route::group(['prefix' => 'program'], function () {
+//   Route::get('/{program}', [ProgramController::class, 'listProgram'])->name('program.list');
+// });
 
-Route::get('/about-us', [AboutUsController::class, 'index'])->name('aboutus.index');
-Route::resource('contact-us', ContactUsController::class);
+// Route::get('/about-us', [AboutUsController::class, 'index'])->name('aboutus.index');
+// Route::resource('contact-us', ContactUsController::class);

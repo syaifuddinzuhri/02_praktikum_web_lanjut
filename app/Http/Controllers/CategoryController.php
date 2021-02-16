@@ -8,6 +8,9 @@ class CategoryController extends Controller
 {
     public function showProducts($category)
     {
-        return '<a href="https://www.educastudio.com/category/' . $category . '" target="_blank">https://www.educastudio.com/category/' . $category . '</a>';
+        $link = '<a href="https://www.educastudio.com/category/' . $category . '" target="_blank">';
+        $link .= 'https://www.educastudio.com/category/' . $category;
+        $link .=  '<a/>';
+        return $link;
     }
 }
